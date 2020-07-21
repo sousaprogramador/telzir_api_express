@@ -7,7 +7,7 @@
   "author": "Mateus <sousa.programador@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests"
   },
   "dependencies": {
