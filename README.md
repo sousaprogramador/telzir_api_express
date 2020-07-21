@@ -1,2 +1,2 @@
 # telzir_api
-api telefonia Telzir
+  Criação de api Telzir usando Express, completa usando typeScript, TDD Clean Architecture, Design Patterns e SOLID. 

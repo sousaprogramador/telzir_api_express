@@ -1,0 +1,9 @@
+{
+  "name": "telzir_api",
+  "version": "1.0.0",
+  "description": "Api de aplicação telzir api",
+  "main": "index.js",
+  "repository": "git@github.com:sousaprogramador/telzir_api.git",
+  "author": "Mateus <sousa.programador@gmail.com>",
+  "license": "MIT"
+}
