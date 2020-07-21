@@ -1,8 +1,17 @@
 export class PlansController {
   handle (httpRequest: any): any {
-    return {
-      statusCode: 200,
-      body: new Error('Missing params: ddd_origin')
+    if (!httpRequest.body.ddd_origin) {
+      return {
+        statusCode: 400,
+        body: new Error('Missing params: ddd_origin')
+      }
+    }
+
+    if (!httpRequest.body.ddd_destination) {
+      return {
+        statusCode: 400,
+        body: new Error('Missing params: ddd_destination')
+      }
     }
   }
 }
