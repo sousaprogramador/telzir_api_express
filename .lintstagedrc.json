@@ -1,6 +1,6 @@
 {
   "*.ts": [
     "eslint 'src/**' --fix",
-    "yarn rum test:staged"
+    "npm rum test:staged"
   ]
 }
