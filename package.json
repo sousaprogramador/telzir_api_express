@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:sousaprogramador/telzir_api.git",
   "author": "Mateus <sousa.programador@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "git-commit-msg-linter": "^2.4.4"
+  }
 }
