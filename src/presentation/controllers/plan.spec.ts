@@ -11,5 +11,6 @@ describe('Plans Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(200)
+    expect(httpResponse.body).toEqual(new Error('Missing params: ddd_origin'))
   })
 })
