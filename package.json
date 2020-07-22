@@ -11,8 +11,10 @@
     "test:staged": "jest --passWithNoTests"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "git-commit-msg-linter": "^2.4.4",
-    "npm-check": "^5.9.2"
+    "npm-check": "^5.9.2",
+    "sequelize": "^6.3.3"
   },
   "devDependencies": {
     "@types/jest": "^26.0.5",
