@@ -1,5 +1,6 @@
+import { HttRequest, HttpResponse } from '../protocols/http'
 export class PlansController {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttRequest): HttpResponse {
     if (!httpRequest.body.ddd_origin) {
       return {
         statusCode: 400,
