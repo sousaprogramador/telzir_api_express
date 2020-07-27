@@ -4,11 +4,11 @@ import { badResquest } from '../helpers/http-helper'
 
 export class PlansController {
   handle(httpRequest: HttRequest): HttpResponse {
-    if (!httpRequest.body.ddd_origin) {
-      return badResquest(new MissingParamError('ddd_origin'))
-    }
-    if (!httpRequest.body.ddd_destination) {
-      return badResquest(new MissingParamError('ddd_destination'))
+    const requiredFields = ['ddd_origin', 'ddd_destination']
+    for (const field of requiredFields) {
+      if (!httpRequest.body[field]) {
+        return badResquest(new MissingParamError(field))
+      }
     }
   }
 }
