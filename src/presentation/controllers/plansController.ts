@@ -1,17 +1,18 @@
 import { HttRequest, HttpResponse } from '../protocols/http'
+import { MissingParamError } from '../errors/missing-params-error'
 export class PlansController {
-  handle (httpRequest: HttRequest): HttpResponse {
+  handle(httpRequest: HttRequest): HttpResponse {
     if (!httpRequest.body.ddd_origin) {
       return {
         statusCode: 400,
-        body: new Error('Missing params: ddd_origin')
+        body: new MissingParamError('ddd_origin')
       }
     }
 
     if (!httpRequest.body.ddd_destination) {
       return {
         statusCode: 400,
-        body: new Error('Missing params: ddd_destination')
+        body: new MissingParamError('ddd_destination')
       }
     }
   }

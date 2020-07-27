@@ -1,4 +1,5 @@
 import { PlansController } from './plansController'
+import { MissingParamError } from '../errors/missing-params-error'
 describe('Plans Controller', () => {
   test('Should return 400 if no ddd_origin is provided', () => {
     const sut = new PlansController()
@@ -10,7 +11,7 @@ describe('Plans Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('Missing params: ddd_origin'))
+    expect(httpResponse.body).toEqual(new MissingParamError('ddd_origin'))
   })
 })
 
@@ -25,6 +26,6 @@ describe('Plans Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('Missing params: ddd_destination'))
+    expect(httpResponse.body).toEqual(new MissingParamError('ddd_destination'))
   })
 })
