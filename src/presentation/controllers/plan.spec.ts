@@ -1,8 +1,13 @@
 import { PlansController } from './plansController'
 import { MissingParamError } from '../errors/missing-params-error'
+
+const makeSut = (): PlansController => {
+  return new PlansController()
+}
+
 describe('Plans Controller', () => {
   test('Should return 400 if no ddd_origin is provided', () => {
-    const sut = new PlansController()
+    const sut = makeSut()
     const httpRequest = {
       body: {
         ddd_destination: 'any_ddd',
@@ -17,7 +22,7 @@ describe('Plans Controller', () => {
 
 describe('Plans Controller', () => {
   test('Should return 400 if no ddd_destination is provided', () => {
-    const sut = new PlansController()
+    const sut = makeSut()
     const httpRequest = {
       body: {
         ddd_origin: 'any_ddd',
