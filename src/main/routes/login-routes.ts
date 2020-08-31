@@ -1,16 +1,7 @@
-import request from 'supertest'
-import app from '@/main/config/app'
+import { Router } from 'express'
 
-describe('SignUp Routes', () => {
-  test('Should return an account on success', async () => {
-    await request(app)
-      .post('/api/signup')
-      .send({
-        name: 'Mateus',
-        email: 'sousa.programador@gmail.com',
-        password: '123',
-        passwordConfirmation: '123'
-      })
-      .expect(200)
+export default (router: Router): void => {
+  router.post('sigunp', (req, res) => {
+    res.json('ok')
   })
-})
+}

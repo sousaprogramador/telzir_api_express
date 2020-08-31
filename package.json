@@ -7,7 +7,7 @@
   "author": "Mateus <sousa.programador@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/main/server.js",
+    "start": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:staged": "jest --passWithNoTests",
     "test:verbose": "jest --passWithNoTests --runInBand",
@@ -20,6 +20,7 @@
     "express": "^4.17.1",
     "fast-glob": "^3.2.4",
     "git-commit-msg-linter": "^2.4.4",
+    "module-alias": "^2.2.2",
     "mongodb": "^3.6.0",
     "mysql2": "^2.1.0",
     "npm-check": "^5.9.2",
